@@ -8,6 +8,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   Docker:
@@ -19,7 +20,7 @@ jobs:
       with:
         node-version: 14
     - name: setup git config
-    - run:
+      run:
          git config user.name "GitHub Actions Bot"
          git config user.email "<>"
 
